@@ -9,7 +9,10 @@ function CustomToolTip(props){
 
 function ActivityGraph(props){
 
+ 
+
     const activityData = props.data
+    console.log(activityData)
     return(
         <div className={styles.container}>
           <header className={styles.header}>
@@ -35,5 +38,6 @@ function ActivityGraph(props){
        
     ) 
 }
+
 
 export default ActivityGraph
