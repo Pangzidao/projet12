@@ -18,10 +18,12 @@ import pic1 from './assets/pic1.png'
 import pic2 from './assets/pic2.png'
 import pic3 from './assets/pic3.png'
 import pic4 from './assets/pic4.png'
+import PropTypes from 'prop-types';
+
+console.log(PropTypes)
 
 
-
-let id = 12
+let id = 18
 let APIconnection = false
 console.log("connected to API: " + APIconnection)
 
