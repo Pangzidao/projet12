@@ -1,0 +1,30 @@
+.container{
+    background-color: #FBFBFB;
+    padding:30px;
+    width: fit-content;
+    width: 100%;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title{
+    color:#20253A;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.legend{
+    display: flex;
+}
+
+.calories{
+    margin-left: 40px;
+}
+
+.calories::marker{
+    color: #E60000;
+}

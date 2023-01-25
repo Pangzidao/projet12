@@ -1,0 +1,110 @@
+.header{
+    height: 91px;
+    width: 100%;
+    background-color: #020203;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    color:#E60000;
+    margin: 20px;
+}
+
+.menu{
+    display: flex;
+    width: 75%;
+    justify-content: space-around;
+}
+.navigation{
+    color: #FFFFFF;
+    list-style: none;
+    font-size: 24px;
+}
+
+.navigation:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.mainContainer{
+    display: flex;
+}
+
+.sideBar{
+    width: 117px;
+    height: 1024px;
+    background-color: #020203;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pics{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.copyright{
+    color: white;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+
+}
+
+.mainPage{
+    margin: 40px;
+    width: 100%;
+}
+
+.mainPageHeading{
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+.firstName{
+    color: #E60000;
+}
+
+.userInfosContainer{
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+}
+
+.graphs{
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.infosCard{
+    flex-basis: 1;
+}
+
+.activityGraphContainer{
+    width: 100%;
+}
+
+.sessionsGraphContainer{
+    width: 30%;
+}
+
+.performanceGraphContainer{
+    width: 100%;
+}
+
+.scoreGraphContainer{
+    width: 30%;
+}
+

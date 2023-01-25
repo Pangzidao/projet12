@@ -1,0 +1,11 @@
+.container{
+    height: 124px;
+    width: 258px;
+    border-radius: 5px;
+    background-color: #FBFBFB;
+    margin: 50px;
+}
+
+.logo{
+    padding: 16px;
+}

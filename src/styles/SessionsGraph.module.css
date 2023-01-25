@@ -1,0 +1,10 @@
+.container{
+    background-color: #FF0000;
+    border-radius: 20px;
+}
+
+.title{
+    margin-top: 100px;
+    color:#FFFFFF;
+    opacity: 50%;
+}
