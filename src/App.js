@@ -20,7 +20,7 @@ import pic3 from './assets/pic3.png'
 import pic4 from './assets/pic4.png'
 
 let id = 18
-let APIconnection = true
+let APIconnection = false
 console.log("connected to API: " + APIconnection)
 
 class UserScore{
