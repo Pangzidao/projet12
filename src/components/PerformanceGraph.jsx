@@ -4,7 +4,6 @@ import styles from '../styles/PerformanceGraph.module.css'
 function PerformanceGraph(props){
 
     const performanceData = props.data
-    console.log(performanceData)
 
 
       return(

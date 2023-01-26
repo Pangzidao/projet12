@@ -19,7 +19,7 @@ import pic2 from './assets/pic2.png'
 import pic3 from './assets/pic3.png'
 import pic4 from './assets/pic4.png'
 
-let id = 18
+let id = 12
 let APIconnection = true
 console.log("connected to API: " + APIconnection)
 
@@ -47,7 +47,6 @@ function App() {
       });
       getUserActivity(id).then((activityData) => {
         setActivityData(activityData)
-        console.log(activityData)
       });
       getUserPerformance(id).then((performanceData) => {
         setPerformanceData(performanceData);

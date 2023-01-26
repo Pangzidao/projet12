@@ -4,7 +4,6 @@ import styles from '../styles/SessionsGraph.module.css'
 function SessionsGraph(props){
 
     const sessionsData = props.data
-    console.log(sessionsData)
     
     return(
       <div className={styles.container}>

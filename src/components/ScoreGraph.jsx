@@ -14,8 +14,7 @@ function ScoreGraph(props){
                 <PieChart width={730} height={250}>
                     <Pie className={styles.sector} data={scoreData} 
                     dataKey="value" nameKey="name" cx="50%" cy="50%" 
-                    outerRadius={80} fill='#FF0000' innerRadius={65}>
-                        
+                    outerRadius={80} fill='#FF0000' innerRadius={65}>             
                     </Pie>
                 </PieChart>
             </ResponsiveContainer>
