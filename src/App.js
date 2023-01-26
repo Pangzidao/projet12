@@ -19,8 +19,8 @@ import pic2 from './assets/pic2.png'
 import pic3 from './assets/pic3.png'
 import pic4 from './assets/pic4.png'
 
-let id = 12
-let APIconnection = false
+let id = 18
+let APIconnection = true
 console.log("connected to API: " + APIconnection)
 
 class UserScore{
@@ -47,6 +47,7 @@ function App() {
       });
       getUserActivity(id).then((activityData) => {
         setActivityData(activityData)
+        console.log(activityData)
       });
       getUserPerformance(id).then((performanceData) => {
         setPerformanceData(performanceData);
@@ -72,7 +73,7 @@ function App() {
         const dataScore = []
         const data = getUserDataMock(id)
         dataScore.push(new UserScore("score", data.todayScore * 100))
-        dataScore.push(new UserScore("score", 100 - data.todayScore * 100))
+        dataScore.push(new UserScore("maxscore", 100 - data.todayScore * 100))
         setScoreData(dataScore) 
         const sessionData = getUserSessionMock(id)
         setSessionsData(sessionData);

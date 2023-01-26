@@ -81,30 +81,38 @@
 }
 
 .graphs{
-    width: 65%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-gap:15px;
 }
 
 .infosCard{
-    flex-basis: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .activityGraphContainer{
-    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: span 3;
 }
 
 .sessionsGraphContainer{
-    width: 30%;
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    height: 200px;
 }
 
 .performanceGraphContainer{
-    width: 100%;
+    grid-column: 2;
+    grid-row: 2;
 }
 
 .scoreGraphContainer{
-    width: 30%;
+    grid-column: 3;
+    grid-row: 2;
 }
 

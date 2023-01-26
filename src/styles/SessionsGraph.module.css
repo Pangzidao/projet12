@@ -1,10 +1,19 @@
 .container{
     background-color: #FF0000;
     border-radius: 20px;
+    height: 250px;
 }
 
 .title{
-    margin-top: 100px;
     color:#FFFFFF;
     opacity: 50%;
+    padding: 20px;
+    font-size: 15px;
+}
+
+.tooltip{
+    background-color: #FFFFFF;
+    padding: 5px;
+    font-size: 10px;
+    font-weight: 500;
 }

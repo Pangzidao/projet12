@@ -80,15 +80,17 @@ export const getUserPerformance = async (id) => {
     const response = await fetch(`http://localhost:3000/user/${id}/performance`)
     const { data } = await response.json()
     const userPerformances = []
+    const subject = ['Cardio', 'Energie', 'Endurance', 'Force', 'Vitesse', 'Intensité']
     data.data.forEach((d) => userPerformances.push(new UserPerformance(d.kind, d.value, 250)))
-    data.data.map((p) => p.kind = data.kind[p.kind])
+    data.data.map((p, index) => p.kind = subject[index])
     return userPerformances
 }
 
 export const getUserPerformanceMock = (id) => {
     const userPerformances = []
+    const subject = ['Cardio', 'Energie', 'Endurance', 'Force', 'Vitesse', 'Intensité']
     const userPerformance = USER_PERFORMANCE.find(item => item.userId === id)
     userPerformance.data.forEach((d) => userPerformances.push(new UserPerformance(d.kind, d.value, 250)))
-    userPerformance.data.map((p) => p.kind = userPerformance.kind[p.kind])
+    userPerformance.data.map((p, index) => p.kind = subject[index])
     return userPerformances
 }

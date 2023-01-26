@@ -1,0 +1,12 @@
+.container{
+    background-color: #FBFBFB;
+    border-radius: 20px;
+    position: relative;
+}
+
+.title{
+    position: absolute;
+    left: 30px;
+    top:30px;
+    font-size: 15px;
+}

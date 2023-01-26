@@ -1,8 +1,7 @@
 .container{
     background-color: #FBFBFB;
     padding:30px;
-    width: fit-content;
-    width: 100%;
+    border-radius: 10px;
 }
 
 .header{
@@ -27,4 +26,12 @@
 
 .calories::marker{
     color: #E60000;
+}
+
+.tooltip{
+    background-color: #E60000;
+    padding: 5px;
+    color: #FBFBFB;
+    font-weight: 500;
+    font-size: 15px;
 }
