@@ -19,7 +19,7 @@ import pic2 from './assets/pic2.png'
 import pic3 from './assets/pic3.png'
 import pic4 from './assets/pic4.png'
 
-let id = 12
+let id = 18
 let APIconnection = true
 console.log("connected to API: " + APIconnection)
 
