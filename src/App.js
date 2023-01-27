@@ -1,5 +1,5 @@
 import ActivityGraph from './components/ActivityGraph';
-import { getUserData, getUserDataMock } from './userData';
+import { getUserData, getUserDataMock, getUserScore, getUserScoreMock } from './userData';
 import { getUserActivity, getUserActivityMock } from './userData';
 import { getUserPerformance, getUserPerformanceMock } from "./userData";
 import { getUserSession, getUserSessionMock } from './userData';
@@ -20,15 +20,7 @@ import pic3 from './assets/pic3.png'
 import pic4 from './assets/pic4.png'
 
 let id = 18
-let APIconnection = false
-console.log("connected to API: " + APIconnection)
-
-class UserScore{
-  constructor(name, value){
-   this.name = name
-   this.value = value
-  }
-}
+let APIconnection = true
 
 function App() {
   const [firstName, setFirstName] = useState('');
@@ -51,33 +43,34 @@ function App() {
       getUserPerformance(id).then((performanceData) => {
         setPerformanceData(performanceData);
       });
-      const dataScore = []
-            getUserData(id).then((data) => {
-                dataScore.push(new UserScore("score", data.todayScore * 100))
-                dataScore.push(new UserScore("score", 100 - data.todayScore * 100))
-                setScoreData(dataScore)
-            })
-            getUserSession(id).then((sessionData) => {
-              setSessionsData(sessionData);
-            });
+           
+      getUserSession(id).then((sessionData) => {
+        setSessionsData(sessionData);
+      });
+
+      getUserScore(id).then((scoreData) =>{
+        setScoreData(scoreData)
+      })
+
     }else{
       const userData = getUserDataMock(id)
       setFirstName(userData.userInfos.firstName);
       setKeyData(userData.keyData);
 
       const activityData = getUserActivityMock(id)
-        setActivityData(activityData);
+      setActivityData(activityData);
+
       const performanceData = getUserPerformanceMock(id)
-        setPerformanceData(performanceData)
-        const dataScore = []
-        const data = getUserDataMock(id)
-        dataScore.push(new UserScore("score", data.todayScore * 100))
-        dataScore.push(new UserScore("maxscore", 100 - data.todayScore * 100))
-        setScoreData(dataScore) 
-        const sessionData = getUserSessionMock(id)
-        setSessionsData(sessionData);
-    }
+      setPerformanceData(performanceData)
+  
+      const sessionData = getUserSessionMock(id)
+      setSessionsData(sessionData);
+
+      const scoreData = getUserScoreMock(id)
+      setScoreData(scoreData)
+      console.log("disconnected")
     
+    }
   }, []);
 
   return (
