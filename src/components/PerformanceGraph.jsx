@@ -1,23 +1,21 @@
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer} from 'recharts';
-
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer} from 'recharts';
+import styles from '../styles/PerformanceGraph.module.css'
 
 function PerformanceGraph(props){
 
     const performanceData = props.data
 
       return(
-        <ResponsiveContainer width='100%' height={450}>
-          <RadarChart cx={300} cy={250} outerRadius={150} width={300} height={300} data={performanceData}>
-            <PolarGrid />
-            <PolarAngleAxis dataKey="subject" />
-            <PolarRadiusAxis angle={30} domain={[0, 250]} />
-            <Radar name="Subjects" dataKey="value" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
-          </RadarChart>
-        </ResponsiveContainer>
-
-        
+        <div className={styles.container}>
+           <ResponsiveContainer width='100%' height={250}>
+            <RadarChart cx='50%' cy='50%' outerRadius={80} width={300} height={300} data={performanceData}>
+              <PolarGrid />
+              <PolarAngleAxis dataKey="subject" fontSize={12} fontWeight={500} axisLine={false} />
+              <Radar name="Subjects" dataKey="value" fill="#FF0101B2" />
+            </RadarChart>
+          </ResponsiveContainer>
+        </div>     
       )
-    
 }
 
 export default PerformanceGraph

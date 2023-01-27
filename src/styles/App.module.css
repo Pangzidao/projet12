@@ -60,7 +60,7 @@
 
 .mainPage{
     margin: 40px;
-    width: 100%;
+    width: 100vw;
 }
 
 .mainPageHeading{
@@ -69,6 +69,7 @@
     line-height: 24px;
     letter-spacing: 0px;
     text-align: left;
+    width: 100%;
 }
 .firstName{
     color: #E60000;
@@ -81,30 +82,38 @@
 }
 
 .graphs{
-    width: 65%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-gap:15px;
+    margin-right: 5%;
 }
 
 .infosCard{
-    flex-basis: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .activityGraphContainer{
-    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: span 3;
 }
 
 .sessionsGraphContainer{
-    width: 30%;
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    height: 200px;
 }
 
 .performanceGraphContainer{
-    width: 100%;
+    grid-column: 2;
+    grid-row: 2;
 }
 
 .scoreGraphContainer{
-    width: 30%;
+    grid-column: 3;
+    grid-row: 2;
 }
 

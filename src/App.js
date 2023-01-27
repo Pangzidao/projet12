@@ -1,8 +1,7 @@
 import ActivityGraph from './components/ActivityGraph';
-import { getUserData, getUserDataMock } from './userData';
-import { getUserActivity, getUserActivityMock } from './userData';
-import { getUserPerformance, getUserPerformanceMock } from "./userData";
-import { getUserSession, getUserSessionMock } from './userData';
+import { getUserData, getUserDataMock, getUserScore, getUserScoreMock, getUserActivity, 
+         getUserActivityMock, getUserPerformance, getUserPerformanceMock, getUserSession, 
+         getUserSessionMock } from './userData';
 import { useState, useEffect } from 'react';
 import SessionsGraph from './components/SessionsGraph';
 import PerformanceGraph from './components/PerformanceGraph';
@@ -20,7 +19,7 @@ import pic3 from './assets/pic3.png'
 import pic4 from './assets/pic4.png'
 
 let id = 12
-let APIconnection = true
+let APIconnection = false
 console.log("connected to API: " + APIconnection)
 
 class UserScore{
@@ -51,33 +50,37 @@ function App() {
       getUserPerformance(id).then((performanceData) => {
         setPerformanceData(performanceData);
       });
-      const dataScore = []
-            getUserData(id).then((data) => {
-                dataScore.push(new UserScore("score", data.todayScore * 100))
-                dataScore.push(new UserScore("score", 100 - data.todayScore * 100))
-                setScoreData(dataScore)
-            })
-            getUserSession(id).then((sessionData) => {
-              setSessionsData(sessionData);
-            });
+           
+      getUserSession(id).then((sessionData) => {
+        setSessionsData(sessionData);
+      });
+
+      getUserScore(id).then((scoreData) =>{
+        setScoreData(scoreData)
+      })
+
+      console.log("connected")
+
     }else{
       const userData = getUserDataMock(id)
       setFirstName(userData.userInfos.firstName);
       setKeyData(userData.keyData);
 
       const activityData = getUserActivityMock(id)
-        setActivityData(activityData);
+      setActivityData(activityData);
+
       const performanceData = getUserPerformanceMock(id)
-        setPerformanceData(performanceData)
-        const dataScore = []
-        const data = getUserDataMock(id)
-        dataScore.push(new UserScore("score", data.todayScore * 100))
-        dataScore.push(new UserScore("score", 100 - data.todayScore * 100))
-        setScoreData(dataScore) 
-        const sessionData = getUserSessionMock(id)
-        setSessionsData(sessionData);
-    }
+      setPerformanceData(performanceData)
+  
+      const sessionData = getUserSessionMock(id)
+      setSessionsData(sessionData);
+
+      const scoreData = getUserScoreMock(id)
+      setScoreData(scoreData)
+
+      console.log("disconnected")
     
+    }
   }, []);
 
   return (
@@ -127,18 +130,12 @@ function App() {
               <Info logo={proteinsLogo} name="Proteines" logoBackground="#e9f4fb" id={id} type="proteinCount"unit="g" APIconnection={APIconnection} data={keyData}/>
               <Info logo={glucidesLogo} name="Glucides" logoBackground="#fbf6e5" id={id} type="carbohydrateCount" unit="g" APIconnection={APIconnection} data={keyData}/>
               <Info logo={lipidesLogo} name="Lipides" logoBackground="#fbeaef" id={id} type="lipidCount" unit="g" APIconnection={APIconnection} data={keyData}/>
-            </div>
-           
+            </div>    
           </div>
-
-        </div>
-        
+        </div>     
       </main>
-      
-
     </div>
   )
 }
-
 
 export default App;
