@@ -32,6 +32,33 @@ class UserPerformance{
     }
 }
 
+class UserScore{
+    constructor(name, value){
+     this.name = name
+     this.value = value
+    }
+}
+
+export const getUserScore = async (id) => {
+    const response = await fetch(`http://localhost:3000/user/${id}`)
+    const { data } = await response.json()
+    let score = data.todayScore || data.score
+    let dataScore = []
+    dataScore.push(new UserScore("score", score * 100))
+    dataScore.push(new UserScore("maxScoreDifference", 100 - score * 100))
+    return dataScore
+}
+
+export const getUserScoreMock = (id) => {
+    const userData = USER_MAIN_DATA.find(item => item.id === id)
+    let score = userData.todayScore || userData.score
+    let dataScore = []
+    dataScore.push(new UserScore("score", score * 100))
+    dataScore.push(new UserScore("maxScoreDifference", 100 - score * 100))
+    return dataScore
+}
+
+
 export const getUserData = async (id) => {
     const response = await fetch(`http://localhost:3000/user/${id}`)
     const { data } = await response.json()
@@ -79,7 +106,6 @@ export const getUserSessionMock = (id) => {
 export const getUserPerformance = async (id) => {
     const response = await fetch(`http://localhost:3000/user/${id}/performance`)
     const { data } = await response.json()
-    console.log(id)
     const userPerformances = []
     const subject = ['Cardio', 'Energie', 'Endurance', 'Force', 'Vitesse', 'Intensité']
     data.data.forEach((d) => userPerformances.push(new UserPerformance(d.kind, d.value, 250)))
