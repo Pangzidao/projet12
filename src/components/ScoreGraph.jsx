@@ -7,6 +7,8 @@ function ScoreGraph(props){
     const scoreData= props.data
 
     console.log(scoreData)
+    console.log(typeof scoreData)
+    scoreData?.map((s) => console.log(s))
 
     return(
         <div className={styles.container}>
@@ -24,5 +26,6 @@ function ScoreGraph(props){
     )
 
 }
+
 
 export default ScoreGraph

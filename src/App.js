@@ -18,15 +18,15 @@ import pic2 from './assets/pic2.png'
 import pic3 from './assets/pic3.png'
 import pic4 from './assets/pic4.png'
 
-let id = 12
-let APIconnection = true
+let id = 18
+let APIconnection = false
 
 function App() {
   const [firstName, setFirstName] = useState('');
   const [activityData, setActivityData] = useState('');
   const [keyData, setKeyData] = useState('');
   const [performanceData, setPerformanceData] = useState('');
-  const [scoreData, setScoreData] = useState('');
+  const [scoreData, setScoreData] = useState([]);
   const [sessionsData, setSessionsData] = useState('');
 
   useEffect(() => {
