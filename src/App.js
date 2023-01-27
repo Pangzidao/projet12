@@ -29,7 +29,6 @@ function App() {
   const [scoreData, setScoreData] = useState('');
   const [sessionsData, setSessionsData] = useState('');
 
-
   useEffect(() => {
     if (APIconnection === true){
       getUserData(id).then((userData) => {
