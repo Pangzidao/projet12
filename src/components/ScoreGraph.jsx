@@ -6,6 +6,7 @@ function ScoreGraph(props){
 
     const scoreData= props.data
 
+    console.log(scoreData)
 
     return(
         <div className={styles.container}>
@@ -19,7 +20,7 @@ function ScoreGraph(props){
                 </PieChart>
             </ResponsiveContainer>
         </div>
-        
+              
     )
 
 }

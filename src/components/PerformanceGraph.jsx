@@ -5,7 +5,6 @@ function PerformanceGraph(props){
 
     const performanceData = props.data
 
-
       return(
         <div className={styles.container}>
            <ResponsiveContainer width='100%' height={250}>
@@ -15,11 +14,8 @@ function PerformanceGraph(props){
               <Radar name="Subjects" dataKey="value" fill="#FF0101B2" />
             </RadarChart>
           </ResponsiveContainer>
-        </div>
-       
-        
+        </div>     
       )
-    
 }
 
 export default PerformanceGraph

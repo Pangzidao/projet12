@@ -4,6 +4,8 @@ import styles from '../styles/Info.module.css'
 function Info(props){
     const type = props.type
     const keyData = props.data
+
+    console.log(type)
   
     return(
         <div className={styles.container}>

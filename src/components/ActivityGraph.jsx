@@ -22,7 +22,7 @@ function ActivityGraph(props){
                 <XAxis dataKey="day" />
                 <YAxis yAxisId="kilogram" axisLine={false} tickCount={4} tickFormatter={(tick) => parseInt(tick)} scale='sequential' dataKey="kilogram" orientation='right' interval="preserveStartEnd" tickLine={false} type="number" domain={([kilogramMin, kilogramMax])=> {return [kilogramMin - 1, kilogramMax + 1]}} />
                 <YAxis dataKey="calories" yAxisId="calories" hide={true}/>
-                <Tooltip 
+                <Tooltip
                 content={({ payload}) => {
                   if (payload && payload.length) {
                   const {kilogram, calories } = payload[0].payload;

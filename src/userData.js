@@ -25,10 +25,10 @@ class UserSession{
 }
 
 class UserPerformance{
-    constructor(subject, value, fullValue){
+    constructor(subject, value, maxValue){
         this.subject = subject
         this.value = value
-        this.fullValue = fullValue
+        this.maxValue = maxValue
     }
 }
 
@@ -108,8 +108,7 @@ export const getUserPerformance = async (id) => {
     const { data } = await response.json()
     const userPerformances = []
     const subject = ['Cardio', 'Energie', 'Endurance', 'Force', 'Vitesse', 'Intensité']
-    data.data.forEach((d) => userPerformances.push(new UserPerformance(d.kind, d.value, 250)))
-    data.data.map((p, index) => p.kind = subject[index])
+    data.data.forEach((d, index) => userPerformances.push(new UserPerformance(subject[index], d.value, 250)))
     return userPerformances
 }
 
@@ -117,7 +116,6 @@ export const getUserPerformanceMock = (id) => {
     const userPerformances = []
     const subject = ['Cardio', 'Energie', 'Endurance', 'Force', 'Vitesse', 'Intensité']
     const userPerformance = USER_PERFORMANCE.find(item => item.userId === id)
-    userPerformance.data.forEach((d) => userPerformances.push(new UserPerformance(d.kind, d.value, 250)))
-    userPerformance.data.map((p, index) => p.kind = subject[index])
+    userPerformance.data.forEach((d, index) => userPerformances.push(new UserPerformance(subject[index], d.value, 250)))
     return userPerformances
 }

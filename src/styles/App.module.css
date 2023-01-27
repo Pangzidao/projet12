@@ -60,7 +60,7 @@
 
 .mainPage{
     margin: 40px;
-    width: 100%;
+    width: 100vw;
 }
 
 .mainPageHeading{
@@ -69,6 +69,7 @@
     line-height: 24px;
     letter-spacing: 0px;
     text-align: left;
+    width: 100%;
 }
 .firstName{
     color: #E60000;
@@ -81,11 +82,11 @@
 }
 
 .graphs{
-    width: 70%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, auto);
     grid-gap:15px;
+    margin-right: 5%;
 }
 
 .infosCard{

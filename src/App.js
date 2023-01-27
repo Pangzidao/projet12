@@ -1,8 +1,7 @@
 import ActivityGraph from './components/ActivityGraph';
-import { getUserData, getUserDataMock, getUserScore, getUserScoreMock } from './userData';
-import { getUserActivity, getUserActivityMock } from './userData';
-import { getUserPerformance, getUserPerformanceMock } from "./userData";
-import { getUserSession, getUserSessionMock } from './userData';
+import { getUserData, getUserDataMock, getUserScore, getUserScoreMock, getUserActivity, 
+         getUserActivityMock, getUserPerformance, getUserPerformanceMock, getUserSession, 
+         getUserSessionMock } from './userData';
 import { useState, useEffect } from 'react';
 import SessionsGraph from './components/SessionsGraph';
 import PerformanceGraph from './components/PerformanceGraph';
@@ -19,7 +18,7 @@ import pic2 from './assets/pic2.png'
 import pic3 from './assets/pic3.png'
 import pic4 from './assets/pic4.png'
 
-let id = 18
+let id = 12
 let APIconnection = true
 
 function App() {
@@ -52,6 +51,8 @@ function App() {
         setScoreData(scoreData)
       })
 
+      console.log("connected")
+
     }else{
       const userData = getUserDataMock(id)
       setFirstName(userData.userInfos.firstName);
@@ -68,6 +69,7 @@ function App() {
 
       const scoreData = getUserScoreMock(id)
       setScoreData(scoreData)
+
       console.log("disconnected")
     
     }
@@ -120,18 +122,12 @@ function App() {
               <Info logo={proteinsLogo} name="Proteines" logoBackground="#e9f4fb" id={id} type="proteinCount"unit="g" APIconnection={APIconnection} data={keyData}/>
               <Info logo={glucidesLogo} name="Glucides" logoBackground="#fbf6e5" id={id} type="carbohydrateCount" unit="g" APIconnection={APIconnection} data={keyData}/>
               <Info logo={lipidesLogo} name="Lipides" logoBackground="#fbeaef" id={id} type="lipidCount" unit="g" APIconnection={APIconnection} data={keyData}/>
-            </div>
-           
+            </div>    
           </div>
-
-        </div>
-        
+        </div>     
       </main>
-      
-
     </div>
   )
 }
-
 
 export default App;
