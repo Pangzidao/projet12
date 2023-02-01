@@ -1,14 +1,11 @@
 import { PieChart, Pie, ResponsiveContainer} from 'recharts';
 import styles from '../styles/ScoreGraph.module.css'
+import PropTypes from 'prop-types';
 
 
 function ScoreGraph(props){
 
     const scoreData= props.data
-
-    console.log(scoreData)
-    console.log(typeof scoreData)
-    scoreData?.map((s) => console.log(s))
 
     return(
         <div className={styles.container}>
@@ -27,5 +24,9 @@ function ScoreGraph(props){
 
 }
 
+
+ScoreGraph.propTypes = {
+    data: PropTypes.array
+  }
 
 export default ScoreGraph

@@ -1,5 +1,7 @@
 import { BarChart, XAxis, YAxis, CartesianGrid, Tooltip, Bar, ResponsiveContainer} from 'recharts';
 import styles from '../styles/ActivityGraph.module.css'
+import PropTypes from 'prop-types';
+
 
 function ActivityGraph(props){
 
@@ -46,5 +48,8 @@ function ActivityGraph(props){
     ) 
 }
 
+ActivityGraph.propTypes = {
+  data: PropTypes.array
+}
 
 export default ActivityGraph

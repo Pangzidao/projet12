@@ -1,9 +1,12 @@
 import { LineChart, Line, XAxis, YAxis,Tooltip, ResponsiveContainer} from 'recharts';
 import styles from '../styles/SessionsGraph.module.css'
+import PropTypes from 'prop-types';
+
 
 function SessionsGraph(props){
 
     const sessionsData = props.data
+    console.log(props.data)
     
     return(
       <div className={styles.container}>
@@ -31,6 +34,10 @@ function SessionsGraph(props){
       </div>
       
     ) 
+}
+
+SessionsGraph.propTypes = {
+  data: PropTypes.array
 }
 
 export default SessionsGraph

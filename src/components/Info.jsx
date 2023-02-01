@@ -1,4 +1,6 @@
 import styles from '../styles/Info.module.css'
+import PropTypes from 'prop-types';
+
 
 
 function Info(props){
@@ -16,5 +18,10 @@ function Info(props){
         </div>
     )
 }
+
+Info.propTypes = {
+    type: PropTypes.string,
+    data: PropTypes.object
+};
 
 export default Info

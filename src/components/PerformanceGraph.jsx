@@ -1,5 +1,7 @@
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer} from 'recharts';
 import styles from '../styles/PerformanceGraph.module.css'
+import PropTypes from 'prop-types';
+
 
 function PerformanceGraph(props){
 
@@ -17,6 +19,11 @@ function PerformanceGraph(props){
         </div>     
       )
 }
+
+PerformanceGraph.propTypes = {
+  data: PropTypes.array
+}
+
 
 export default PerformanceGraph
 
