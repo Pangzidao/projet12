@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 function ScoreGraph(props){
 
     const scoreData= props.data
+    scoreData.map((s) => console.log(s))
 
     return(
         <div className={styles.container}>
