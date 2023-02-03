@@ -1,17 +1,12 @@
-# SportSee Dashboard
-
 ## Prerequisites
 
-- [NodeJS (version 14.17)](https://nodejs.org/en/)
+- [NodeJS (version 18.13.0)](https://nodejs.org/en/)
 
 ## Dependencies
 
 - [React](https://reactjs.org/)
-- [react-router-dom](https://reactrouter.com/web/guides/quick-start)
 - [recharts](https://recharts.org/en-US/)
-- [styled-components](https://styled-components.com/)
-- [axios](https://axios-http.com/)
-- [prop-types](https://github.com/facebook/prop-types)
+- [prop-types](https://fr.reactjs.org/docs/typechecking-with-proptypes.html)
 - Recommended text editor: [Visual Studio Code](https://code.visualstudio.com/)
 
 ## Installation
@@ -25,11 +20,11 @@
 
 2. Clone this repository
    ```sh
-   git clone https://github.com/FlorysiakSimon/SportSee
+   git clone https://github.com/Pangzidao/projet12
    ```
 3. Install NPM packages
    ```sh
-   npm i
+   npm install
    ```
 4. Run the project (port 3001 by default)
    ```sh

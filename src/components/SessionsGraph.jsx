@@ -2,6 +2,14 @@ import { LineChart, Line, XAxis, YAxis,Tooltip, ResponsiveContainer} from 'recha
 import styles from '../styles/SessionsGraph.module.css'
 import PropTypes from 'prop-types';
 
+/**
+ * A component that renders a line chart to display the average session duration.
+ * @function
+ * @param {Object} props - The properties of the component
+ * @param {Array} props.data - An array of objects containing session duration data, where each object has the properties "day" (the day of the week) and "minutes" (the average session duration in minutes).
+ * @returns {JSX.Element} A JSX component that displays a line chart of session duration data.
+ */
+
 
 function SessionsGraph(props){
 

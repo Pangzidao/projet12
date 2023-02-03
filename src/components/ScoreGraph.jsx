@@ -2,6 +2,13 @@ import { PieChart, Pie, ResponsiveContainer, Cell} from 'recharts';
 import styles from '../styles/ScoreGraph.module.css'
 import PropTypes from 'prop-types';
 
+/**
+ * Renders a pie chart to visualize the score data.
+ * @param {object} props - The props passed to the component.
+ * @param {Array} props.data - An array of objects representing the score data. Each object should have a "name" property (either "score" or "maxScoreDifference") and a "value" property (a number).
+ * @returns {JSX.Element} A react component that displays a pie chart of the score data.
+ */
+
 
 function ScoreGraph(props){
 
