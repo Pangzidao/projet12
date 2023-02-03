@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 function SessionsGraph(props){
 
     const sessionsData = props.data
-    console.log(props.data)
     
     return(
       <div className={styles.container}>

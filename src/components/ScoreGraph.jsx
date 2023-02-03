@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 function ScoreGraph(props){
 
     const scoreData= props.data
-    scoreData.map((s) => console.log(s))
     const colors = ["#E60000", "#FBFBFB"]
 
     return(
