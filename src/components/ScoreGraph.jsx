@@ -14,10 +14,15 @@ function ScoreGraph(props){
 
     const scoreData= props.data
     const colors = ["#E60000", "#FBFBFB"]
+    console.log(scoreData)
 
     return(
         <div className={styles.container}>
             <h2 className={styles.title}>Score</h2>
+            <p className={styles.score}>
+                <span className={styles.percentage}>{scoreData[0].value} %</span>
+                 <br></br>
+                 <span className={styles.objective}>de votre objectif</span> </p>
             <ResponsiveContainer width='100%' height={250}>
                 <PieChart width={730} height={250}>
                     <Pie className={styles.sector} data={scoreData} 
@@ -25,7 +30,7 @@ function ScoreGraph(props){
                     outerRadius={80} fill='#FF0000' innerRadius={65} startAngle={90}>
                         {
                         scoreData.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={colors[index]}/>
+                        <Cell cornerRadius="50%" key={`cell-${index}`} fill={colors[index]}/>
                         ))}             
                     </Pie>
                 </PieChart>

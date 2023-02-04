@@ -19,16 +19,8 @@ import pic3 from './assets/pic3.png'
 import pic4 from './assets/pic4.png'
 
 
-let id = 12
+let id = 18
 let APIconnection = false
-console.log("connected to API: " + APIconnection)
-
-class UserScore{
-  constructor(name, value){
-   this.name = name
-   this.value = value
-  }
-}
 
 function App() {
   const [firstName, setFirstName] = useState();

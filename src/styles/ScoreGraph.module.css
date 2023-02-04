@@ -6,8 +6,27 @@
 
 .title{
     position: absolute;
-    left: 30px;
-    top:30px;
+    left: 20px;
+    top:20px;
     font-size: 15px;
 }
 
+.score{
+    position:absolute;
+    left:38%;
+    top:85px;
+    width: 80px;
+    text-align: center;
+}
+.sector{
+    border: solid;
+}
+.percentage{
+    font-weight: bold;
+    font-size: large;
+}
+
+.objective{
+    color: #74798C;
+    font-weight: bold;
+}
