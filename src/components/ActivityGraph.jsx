@@ -1,9 +1,18 @@
 import { BarChart, XAxis, YAxis, CartesianGrid, Tooltip, Bar, ResponsiveContainer} from 'recharts';
 import styles from '../styles/ActivityGraph.module.css'
+import PropTypes from 'prop-types';
+
+
+/**
+ * A React functional component that displays an graph that daily tracks weight and calories burned. .
+ * @function
+ * @param {Object} props - The properties passed to the component.
+ * @param {Array} props.data - An array of objects containing the activity data.
+ * @returns {JSX.Element} - A div containing the activity graph.
+ * @property {Array} data - An array of objects representing the activity data, each object should contain the keys "day", "kilogram", and "calories".
+ */
 
 function ActivityGraph(props){
-
- 
 
     const activityData = props.data
 
@@ -46,5 +55,8 @@ function ActivityGraph(props){
     ) 
 }
 
+ActivityGraph.propTypes = {
+  data: PropTypes.array
+}
 
 export default ActivityGraph
