@@ -19,7 +19,7 @@ import pic3 from './assets/pic3.png'
 import pic4 from './assets/pic4.png'
 
 
-let id = 18
+let id = 12
 let APIconnection = false
 
 function App() {

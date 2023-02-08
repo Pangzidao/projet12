@@ -14,7 +14,6 @@ function ScoreGraph(props){
 
     const scoreData= props.data
     const colors = ["#E60000", "#FBFBFB"]
-    console.log(scoreData)
 
     return(
         <div className={styles.container}>
