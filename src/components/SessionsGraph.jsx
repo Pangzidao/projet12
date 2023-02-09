@@ -47,7 +47,7 @@ function SessionsGraph(props){
         (e.activeCoordinate.x / windowWidth) * 100
       );
       
-      sessionWrap.style.background = `linear-gradient(90deg, rgba(255,0,0, 1) ${mouseXpercent}%, rgba(0,0,0,0.1) ${mouseXpercent}%, rgba(0,0,0,0.1) 100%)`;
+      sessionWrap.style.background = `linear-gradient(90deg, red ${mouseXpercent}%, rgba(230,0,0,255) ${mouseXpercent}%`;
     }
     else{
         sessionWrap.style.background ='red'
@@ -65,9 +65,10 @@ function customOnMouseOut(){
 }
     
     return(
-      <div className="sessionDurationWrap">
+      <div className="sessionDurationWrap" style={{backgroundColor: "red",
+      borderRadius: 20, height: 250}}>
         <h2 className={styles.title}>Durée moyenne des sessions</h2>
-        <ResponsiveContainer width='100%' height={150}>
+        <ResponsiveContainer width='100%' height={150} >
             <LineChart width={500} height={300} data={sessionsData}
              onMouseMove={(e) => customMouseMove(e)}
              onMouseOut={() => customOnMouseOut()}

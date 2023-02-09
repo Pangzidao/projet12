@@ -130,6 +130,8 @@ function App() {
         </main>
       </div>
     )
+  }else{
+    console.log("no data")
   }
   
 }

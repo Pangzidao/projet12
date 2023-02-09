@@ -4,6 +4,12 @@
     height: 250px;
 }
 
+.altContainer{
+    background-color: blue;
+    border-radius: 20px;
+    height: 250px;
+}
+
 .title{
     color:#FFFFFF;
     opacity: 50%;
@@ -15,5 +21,5 @@
     background-color: #FFFFFF;
     padding: 5px;
     font-size: 10px;
-    font-weight: 500;
+    font-weight: bold;
 }
