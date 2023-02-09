@@ -132,7 +132,7 @@ function App() {
     )
   }else{
     return <p>error: you don't have access to the datas from the backend<br/>
-    please see the file 'README.md' to launch the backend
+    please read the file 'README.md' to launch the backend
     </p>
   }
   
