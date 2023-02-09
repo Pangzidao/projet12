@@ -131,7 +131,9 @@ function App() {
       </div>
     )
   }else{
-    console.log("no data")
+    return <p>error: you don't have access to the datas from the backend<br/>
+    please see read the file 'README.md' to launch the backend
+    </p>
   }
   
 }
